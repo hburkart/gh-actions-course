@@ -5,7 +5,7 @@ on:
             use-cache:
                 type: boolean
                 default: true
-                description: Wheter to execute cache step 
+                description: Whether to execute cache step 
             node-version:
                 type: choice
                 options:
