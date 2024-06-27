@@ -18,7 +18,7 @@ jobs:
                     - os: ubuntu-latest
                       node-version: 16.x
                     - os: ubuntu-latest
-                      node: 21.x
+                      node-version: 21.x
                       tag: experimental
             fail-fast: false
         runs-on: ubuntu-latest
