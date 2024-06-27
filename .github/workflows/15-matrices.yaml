@@ -62,7 +62,9 @@ jobs:
                       shape: triangle
                     - opacity: 50
                 exclude: 
-                    - opacity: 75
+                    - color: green
+                      shape: circle
+                      size: medium
         steps:
             - name: Dummy step
               run: |
