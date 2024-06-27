@@ -20,7 +20,7 @@ jobs:
                     - os: ubuntu-latest
                       node-version: 21.x
                       tag: experimental
-            fail-fast: true
+            fail-fast: false
         runs-on: ubuntu-latest
         steps:
             - name: Setup Node
@@ -39,7 +39,7 @@ jobs:
               run: |
                 echo "Uploading test results"
     include-exmaple:
-        name: ${{ matrix.color }}-${{ matrix.shape }}-${{matrix.size }}
+        name: ${{ matrix.color }}-${{ matrix.shape }}-${{matrix.size }}-${{ matrix.opacity }}
         runs-on: ubuntu-latest
         strategy:
             matrix:
@@ -53,7 +53,8 @@ jobs:
                     - small
                     - large
                 include:
-                    - color: red
+                    - opacity: 50
+                      color: red
                       shape: triangle
         steps:
             - name: Dummy step
